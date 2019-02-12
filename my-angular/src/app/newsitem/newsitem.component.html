@@ -1,0 +1,8 @@
+<div class="news-preview" *ngFor="let news of newsList">
+  <div class="preview-wrapper">
+    <img src={{news.urlToImage}} width=100 /> <h2>{{news.title}}</h2>
+  </div>
+  <button onclick="window.location.href='/edit'">edit</button>
+</div>
+
+<app-loadmore (outputData)="handler($event)"></app-loadmore>
